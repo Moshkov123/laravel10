@@ -11,8 +11,8 @@ class Photo extends Model
     use HasFactory;
     protected $fillable =['photo','product_id'];
 
-    public function product(): BelongsTo
+    public function product()
     {
-        return $this->belongsTo(Product::class);
+        return $this->BelongsToMany(Product::class);
     }
 }

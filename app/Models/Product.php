@@ -26,13 +26,15 @@ class Product extends Model
     // {
     //     return $this->belongsTo(Product_Feature::class);
     // }
-    public function productCategory()
+    public function productCategory(): HasMany
     {
         return $this->hasMany(Product_Categorie::class);
     }
 
-    public function productFeature()
+    public function productFeature(): HasMany
     {
         return $this->hasMany(Product_Feature::class);
     }
+
+
 }
